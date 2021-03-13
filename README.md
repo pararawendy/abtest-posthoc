@@ -2,7 +2,7 @@
 This repository provides a handy R-function that handles end-to-end multiclass AB testing analysis with proportion-based metric (including posthoc test)
 
 ## About the function
-I worte a function called ``hollistic_abtest``. This function aims to perform all the required statistical tests for a multiclass AB test (i.e. AB test with more than two experimental groups) with proportion-based metric. First, it will perform a Chi-square test on the aggregate data level. If this test is significant, the function will continue to perform a posthoc test that consists of testing each pair of experimental groups to report their adjusted p-values, as well as their absolute lift (difference) confidence intervals.
+I wrote a function called ``hollistic_abtest``. This function aims to perform all the required statistical tests for a multiclass AB test (i.e. AB test with more than two experimental groups) with proportion-based metric. First, it will perform a Chi-square test on the aggregate data level. If this test is significant, the function will continue to perform a posthoc test that consists of testing each pair of experimental groups to report their adjusted p-values, as well as their absolute lift (difference) confidence intervals.
 
 ## Function parameters
 The function has four parameters.
@@ -19,8 +19,8 @@ If the initial Chi-square test on the original data returns a significant result
 1. ``pair`` : pair of experimental groups being tested (e.g. ``segment_1 vs segment_2``)
 2. ``raw_p_value`` : raw p-value of the corresponding pair
 3. ``adj_p_value`` : adjusted p-value of the corresponding pair, significant result is marked with ``*``
-4. ``lower_ci`` : lower bound of 95% confidence interval of delta ``segment_2 - segment_1``
-5. ``upper_ci`` : upper bound of 95% confidence interval of delta ``segment_2 - segment_1``
+4. ``lower_ci`` : lower bound of 95% confidence interval of delta ``segment_2 - segment_1``, note that this column will be NA if the corresponding adjusted p-value is not significant.
+5. ``upper_ci`` : upper bound of 95% confidence interval of delta ``segment_2 - segment_1``, note that this column will be NA if the corresponding adjusted p-value is not significant.
 
 ## Sample usage
 ### Codes
