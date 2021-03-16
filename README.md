@@ -41,11 +41,11 @@ holistic_abtest(data)
 ```
 ### Results
 ```
-                  pair  raw_p_value    adj_p_value     lower_ci    upper_ci
-1  control vs design_a 1.632451e-05  2.44868e-05 * -0.028509770 -0.01064146
-2  control vs design_b 4.564872e-06   9.1297e-06 *  0.012587295  0.03156561
-3  control vs design_c 2.545389e-04 0.0003054467 *  0.008103611  0.02701192
-4 design_a vs design_b 1.206372e-18            0 *  0.032381756  0.05092238
-5 design_a vs design_c 2.732312e-15            0 *  0.027898944  0.04636782
-6 design_b vs design_c 3.709578e-01   0.3709577841           NA          NA
+                  pair  raw_p_value   adj_p_value    lower_ci    upper_ci
+1  control vs design_a 1.286847e-06  1.9303e-06 * -0.03424870 -0.01444305
+2  control vs design_b 1.222260e-07   2.445e-07 *  0.01804483  0.03951195
+3  control vs design_c 2.564814e-05 3.07778e-05 *  0.01210044  0.03343750
+4 design_a vs design_b 9.910166e-24           0 *  0.04271710  0.06353142
+5 design_a vs design_c 2.780364e-19           0 *  0.03677482  0.05745486
+6 design_b vs design_c 2.949110e-01  0.2949110465          NA          NA
 ```
