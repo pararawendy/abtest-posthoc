@@ -60,9 +60,9 @@ posthoc_abtest <- function(data, method = "BH", alpha = 0.05, rounding = 10) { #
 # wrapper end-to-end function
 holistic_abtest <- function(data, method = "BH", alpha = 0.05, rounding = 10) {
   #data format for chi square test
-  chi_data = as.table(cbind(data[,1], data[,2] - data[,1])) 
-  if(chisq.test(chi_data)$p.value<alpha) {
-    posthoc_abtest(data, method = method, alpha = alpha, rounding = rounding)
+  formatted_data = as.table(cbind(data[,1], data[,2] - data[,1])) 
+  if(chisq.test(formatted_data)$p.value<alpha) {
+    posthoc_abtest(formatted_data, method = method, alpha = alpha, rounding = rounding)
   } else  {
     print("Chi-Square test not significant")
   } 
