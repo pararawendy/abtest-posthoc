@@ -12,7 +12,7 @@ The function has four parameters.
 4. ``rounding`` : number of decimal rounding for the adjusted p-values, default = ``10`` 
 
 ## Format data
-The ``hollistic_abtest`` function requires data in ``data.table`` format, with ``dimnames = c("segment", "action")``. Moreover, dimension name ``action`` must consists of two columns ``p`` and ``q``, which together construct proportion-based metric ``p/q``. 
+The ``holistic_abtest`` function requires data in ``data.table`` format, with ``dimnames = c("segment", "action")``. Moreover, dimension name ``action`` must consists of two columns ``p`` and ``q``, which together construct proportion-based metric ``p/q``. 
 
 ## Reading the output
 If the initial Chi-square test on the original data returns a significant result, the function will perform a complete posthoc test and will return a dataframe with five columns.
