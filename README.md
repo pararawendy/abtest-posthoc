@@ -1,5 +1,5 @@
 # abtest-posthoc
-Handy R-function that handles end-to-end multiclass AB testing analysis with proportion-based metric (including posthoc test)
+This repository provides a handy R-function that handles end-to-end multiclass AB testing analysis with proportion-based metric (including posthoc test)
 
 ## About the function
 I wrote a function called ``holistic_abtest``. This function aims to perform all the required statistical tests for a multiclass AB test (i.e. AB test with more than two experimental groups) with proportion-based metric. First, it will perform a Chi-square test on the aggregate data level. If this test is significant, the function will continue to perform a posthoc test that consists of testing each pair of experimental groups to report their adjusted p-values, as well as their absolute lift (difference) confidence intervals.
