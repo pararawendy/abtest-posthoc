@@ -61,6 +61,7 @@ posthoc_abtest <- function(data, method = "BH", alpha = 0.05, rounding = 10) { #
 holistic_abtest <- function(data, method = "BH", alpha = 0.05, rounding = 10) {
   #data format for chi square test
   formatted_data = as.table(cbind(data[,1], data[,2] - data[,1])) 
+  dimnames(formatted_data) = dimnames(data)
   if(chisq.test(formatted_data)$p.value<alpha) {
     posthoc_abtest(formatted_data, method = method, alpha = alpha, rounding = rounding)
   } else  {
